@@ -1,0 +1,18 @@
+backend:
+  name: git-gateway
+  branch: main # تأكد أن هذا هو اسم الفرع في GitHub عندك
+
+media_folder: "assets/img" # المجلد الذي ستُحفظ فيه صور المقالات
+public_folder: "/assets/img"
+
+collections:
+  - name: "blog"
+    label: "المقالات"
+    folder: "blog" # المجلد الذي ستظهر فيه المقالات في GitHub
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "العنوان", name: "title", widget: "string" }
+      - { label: "وصف المقال", name: "body", widget: "markdown" }
+      - { label: "التاريخ", name: "date", widget: "datetime" }
+      - { label: "صورة الغلاف", name: "image", widget: "image" }
