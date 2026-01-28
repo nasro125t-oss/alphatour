@@ -1,0 +1,332 @@
+document.addEventListener('DOMContentLoaded', () => {
+    // Translations
+    const translations = {
+        ar: {
+            nav_home: 'الرئيسية',
+            nav_about: 'عني',
+            nav_skills: 'المهارات',
+            nav_projects: 'المشاريع',
+            nav_contact: 'اتصل بي',
+            hero_title: 'ALPHA',
+            hero_desc: 'مزيج بين السياحة والذكاء الاصطناعي لرسم مستقبل السياحة الثقافية في الجزائر.',
+            btn_projects: 'عرض المشاريع',
+            btn_contact: 'تواصل معي',
+            about_title: 'من أنا',
+            about_text: 'خريج تخصص إدارة الأعمال السياحية طموح حاصل على ماستر مهني. أجمع بين خلفية صلبة في السياحة والابتكار التكنولوجي. فلسفتي تعتمد على استخدام الذكاء الاصطناعي والتسويق الرقمي لتقديم تجارب سياحية لا تُنسى، مع ضمان الكفاءة المالية والقانونية للمشاريع.',
+            skills_title: 'المهارات والخبرات',
+            skill_mgmt: 'التخصصات المهنية',
+            skill_master: 'ماستر مهني في إدارة الأعمال السياحية',
+            skill_intern: 'تربص في مجال الموارد البشرية بفندق ماريوت العالمي',
+            skill_law: 'ليسانس في القانون العام',
+            skill_tech: 'التكنولوجيا والذكاء الاصطناعي',
+            skill_ai: 'عناصر الذكاء الاصطناعي (AI)',
+            skill_marketing: 'أساسيات التسويق الرقمي',
+            skill_data: 'تحليل البيانات (SPSS)',
+            skill_finance: 'المالية واللغات',
+            skill_pricing: 'إدارة وتسعير الأعمال (FinTech)',
+            skill_english: 'الإنجليزية (B2 Upper Intermediate)',
+            skill_accounting: 'المحاسبة (Simple Comptable)',
+            projects_title: 'المشاريع الحالية',
+            project_alpha: 'منصة ألفا - ALPHA',
+            project_alpha_desc: 'مشروع رائد لرقمنة السياحة الثقافية والتاريخية في ولايات الشرق الجزائري باستخدام حلول تقنية متطورة.',
+            project_coming_soon: 'قريباً..',
+            contact_title: 'تواصل معي',
+            contact_name_placeholder: 'الاسم الكامل',
+            contact_email_placeholder: 'البريد الإلكتروني',
+            contact_msg_placeholder: 'رسالتك',
+            contact_send: 'إرسال',
+            footer_copy: '© 2026 ALPHA- جميع الحقوق محفوظة',
+            page_title: 'ALPHA | منصة ألفا الرقمية',
+            lang_btn: 'English',
+            blog_title: 'آخر المقالات',
+            loading: 'جاري تحميل المقالات...',
+            read_more: 'اقرأ المزيد',
+            no_blogs: 'لا توجد مقالات حالياً.'
+        },
+        en: {
+            nav_home: 'Home',
+            nav_about: 'About',
+            nav_skills: 'Skills',
+            nav_projects: 'Projects',
+            nav_contact: 'Contact',
+            hero_title: 'ALPHA',
+            hero_desc: 'A fusion of Tourism and AI to shape the future of cultural tourism in Algeria.',
+            btn_projects: 'View Projects',
+            btn_contact: 'Contact Me',
+            about_title: 'Who Am I',
+            about_text: 'Ambitious Tourism Management graduate with a Professional Master’s degree. I combine a solid background in tourism with technological innovation. My philosophy relies on using Artificial Intelligence and Digital Marketing to provide unforgettable tourism experiences, while ensuring financial and legal efficiency for projects.',
+            skills_title: 'Skills & Experience',
+            skill_mgmt: 'Professional Specializations',
+            skill_master: 'Professional Master in Tourism Management',
+            skill_intern: 'HR Internship at Marriott International',
+            skill_law: 'Bachelor in Public Law',
+            skill_tech: 'Technology & AI',
+            skill_ai: 'Elements of AI',
+            skill_marketing: 'Digital Marketing Fundamentals',
+            skill_data: 'Data Analysis (SPSS)',
+            skill_finance: 'Finance & Languages',
+            skill_pricing: 'Business Management & Pricing (FinTech)',
+            skill_english: 'English (B2 Upper Intermediate)',
+            skill_accounting: 'Accounting (Simple Comptable)',
+            projects_title: 'Current Projects',
+            project_alpha: 'ALPHA Platform',
+            project_alpha_desc: 'A pioneering project to digitize cultural and historical tourism in Eastern Algeria using advanced technical solutions.',
+            project_coming_soon: 'Coming Soon..',
+            contact_title: 'Contact Me',
+            contact_name_placeholder: 'Full Name',
+            contact_email_placeholder: 'Email Address',
+            contact_msg_placeholder: 'Your Message',
+            contact_send: 'Send',
+            footer_copy: '© 2026 ALPHA- All Rights Reserved',
+            page_title: 'ALPHA | Digital Platform',
+            lang_btn: 'عربي',
+            blog_title: 'Latest Articles',
+            loading: 'Loading articles...',
+            read_more: 'Read More',
+            no_blogs: 'No articles found.'
+        }
+    };
+
+    // DOM Elements
+    const themeToggle = document.getElementById('theme-toggle');
+    const langToggle = document.getElementById('lang-toggle');
+    const body = document.body;
+    const htmlElement = document.documentElement;
+
+    // --- Theme Logic ---
+    if (themeToggle) {
+        themeToggle.addEventListener('click', () => {
+            body.classList.toggle('light-theme');
+            updateThemeIcon();
+            localStorage.setItem('theme', body.classList.contains('light-theme') ? 'light' : 'dark');
+        });
+
+        function updateThemeIcon() {
+            themeToggle.textContent = body.classList.contains('light-theme') ? '☀️' : '🌙';
+        }
+
+        // Initialize Theme
+        if (localStorage.getItem('theme') === 'light') {
+            body.classList.add('light-theme');
+            updateThemeIcon();
+        }
+    }
+
+    // --- Language Logic ---
+    if (langToggle) {
+        let currentLang = localStorage.getItem('lang') || 'ar'; // Default to Arabic
+
+        const updateLanguage = (lang) => {
+            // Update HTML attributes
+            htmlElement.lang = lang;
+            htmlElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+
+            // Update Page Title
+            if (translations[lang]['page_title']) {
+                document.title = translations[lang]['page_title'];
+            }
+
+            // Update Text Content
+            document.querySelectorAll('[data-i18n]').forEach(element => {
+                const key = element.getAttribute('data-i18n');
+                if (translations[lang][key]) {
+                    element.textContent = translations[lang][key];
+                }
+            });
+
+            // Update Placeholders
+            document.querySelectorAll('[data-i18n-placeholder]').forEach(element => {
+                const key = element.getAttribute('data-i18n-placeholder');
+                if (translations[lang][key]) {
+                    element.placeholder = translations[lang][key];
+                }
+            });
+
+            // Update Toggle Button Text
+            langToggle.textContent = translations[lang]['lang_btn'];
+
+            // Font Adjustment
+            if (lang === 'en') {
+                document.documentElement.style.setProperty('--font-main', "'Inter', 'Tajawal', sans-serif");
+            } else {
+                document.documentElement.style.setProperty('--font-main', "'Tajawal', sans-serif");
+            }
+
+            // Save preference
+            localStorage.setItem('lang', lang);
+            currentLang = lang;
+        };
+
+        // Initialize Language
+        updateLanguage(currentLang);
+
+        langToggle.addEventListener('click', () => {
+            const newLang = currentLang === 'ar' ? 'en' : 'ar';
+            updateLanguage(newLang);
+        });
+    }
+
+    // Scroll Animations
+    const observerOptions = {
+        threshold: 0.1
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('fade-in-visible');
+            }
+        });
+    }, observerOptions);
+
+    document.querySelectorAll('.section').forEach(section => {
+        observer.observe(section);
+    });
+
+    // Smooth Scrolling
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                target.scrollIntoView({
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+
+    // ===== EmailJS Configuration =====
+    const EMAILJS_CONFIG = {
+        publicKey: 'mRqoThq2EYlAxZKzl',      // Your Public Key
+        serviceId: 'service_3t8m3ta',        // Your Service ID
+        templateId: 'template_tiqhxod'       // Your Template ID
+    };
+
+    // Initialize EmailJS
+    if (typeof emailjs !== 'undefined') {
+        emailjs.init({
+            publicKey: EMAILJS_CONFIG.publicKey
+        });
+        console.log('✅ EmailJS initialized successfully');
+        console.log('📧 Configuration:', {
+            serviceId: EMAILJS_CONFIG.serviceId,
+            templateId: EMAILJS_CONFIG.templateId,
+            publicKey: EMAILJS_CONFIG.publicKey.substring(0, 5) + '...' // Show only first 5 chars for security
+        });
+    } else {
+        console.error('❌ EmailJS library not loaded!');
+    }
+
+    // Contact Form Handler
+    const contactForm = document.getElementById('contact-form');
+    if (contactForm) {
+        contactForm.addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            // Check if EmailJS is configured
+            if (EMAILJS_CONFIG.publicKey === 'YOUR_PUBLIC_KEY') {
+                alert('⚠️ يرجى إعداد EmailJS أولاً!\nPlease configure EmailJS first!\n\nاتبع الخطوات في ملف: .agent/workflows/setup-emailjs.md');
+                return;
+            }
+
+            const submitBtn = this.querySelector('button[type="submit"]');
+            const originalText = submitBtn.textContent;
+            const currentLang = localStorage.getItem('lang') || 'ar';
+
+            // Disable button and show loading state
+            submitBtn.disabled = true;
+            submitBtn.textContent = currentLang === 'ar' ? 'جاري الإرسال...' : 'Sending...';
+
+            // Send email using EmailJS
+            emailjs.sendForm(
+                EMAILJS_CONFIG.serviceId,
+                EMAILJS_CONFIG.templateId,
+                this
+            )
+                .then(function (response) {
+                    console.log('✅ SUCCESS!', response.status, response.text);
+
+                    // Success message
+                    const successMsg = currentLang === 'ar'
+                        ? '✅ تم إرسال رسالتك بنجاح! سأتواصل معك قريباً.'
+                        : '✅ Message sent successfully! I will contact you soon.';
+
+                    alert(successMsg);
+
+                    // Reset form
+                    contactForm.reset();
+
+                    // Re-enable button
+                    submitBtn.disabled = false;
+                    submitBtn.textContent = originalText;
+                })
+                .catch(function (error) {
+                    console.error('❌ FAILED...', error);
+                    console.error('Error details:', {
+                        status: error.status,
+                        text: error.text,
+                        message: error.message
+                    });
+
+                    // Detailed error message
+                    let errorDetails = '';
+                    if (error.text) {
+                        errorDetails = '\n\nتفاصيل الخطأ: ' + error.text;
+                    }
+
+                    // Error message
+                    const errorMsg = currentLang === 'ar'
+                        ? '❌ فشل إرسال الرسالة.' + errorDetails + '\n\nيرجى التواصل عبر البريد الإلكتروني مباشرة.'
+                        : '❌ Failed to send message.' + errorDetails + '\n\nPlease contact via email directly.';
+
+                    alert(errorMsg);
+
+                    // Re-enable button
+                    submitBtn.disabled = false;
+                    submitBtn.textContent = originalText;
+                });
+        });
+    }
+
+    // --- Dynamic Blog Fetching ---
+    async function loadBlogPosts() {
+        const blogContainer = document.getElementById('blog-posts');
+        if (!blogContainer) return;
+
+        const currentLang = localStorage.getItem('lang') || 'ar';
+
+        try {
+            // ملاحظة: في بيئة Netlify، يمكنك استخدام API لجلب الملفات 
+            // ولكن الآن سنقوم بمحاولة جلب ملف عينة لتوضيح الفكرة
+            const response = await fetch('/blog/sample-post.md');
+            if (!response.ok) throw new Error('No posts');
+
+            const text = await response.text();
+
+            // استخراج الـ Frontmatter (البيانات بين ---)
+            const frontmatterMatch = text.match(/^---([\s\S]*?)---/);
+            if (frontmatterMatch) {
+                const yamlData = frontmatterMatch[1];
+                const title = yamlData.match(/title:\s*"(.*?)"/)?.[1] || 'No Title';
+                const description = yamlData.match(/description:\s*"(.*?)"/)?.[1] || '';
+                const date = yamlData.match(/date:\s*(.*?)\n/)?.[1] || '';
+
+                blogContainer.innerHTML = `
+                    <div class="project-card blog-card fade-in">
+                        <div class="blog-date">${new Date(date).toLocaleDateString(currentLang === 'ar' ? 'ar-EG' : 'en-US')}</div>
+                        <h3>${title}</h3>
+                        <p>${description}</p>
+                        <a href="/blog/sample-post.md" class="project-link">${translations[currentLang].read_more}</a>
+                    </div>
+                `;
+            }
+        } catch (error) {
+            console.log('Blog loading info:', error.message);
+            blogContainer.innerHTML = `<p class="no-blogs">${translations[currentLang].no_blogs}</p>`;
+        }
+    }
+
+    // Load blogs on start
+    loadBlogPosts();
+});
