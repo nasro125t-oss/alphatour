@@ -1,182 +1,0 @@
-<!DOCTYPE html>
-<html lang="ar" dir="rtl">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ALPHA | منصة ألفا الرقمية</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800&family=Inter:wght@300;400;600;700&display=swap"
-        rel="stylesheet">
-    <!-- Using a placeholder for fontawesome since the kit code provided was generic/placeholder -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-</head>
-
-<body class="dark-theme">
-    <!-- Decorative Background Elements -->
-    <div class="decorations-container">
-        <!-- Original Icons -->
-        <i class="fas fa-plane decoration-item plane-icon"></i>
-        <i class="fas fa-umbrella-beach decoration-item beach-icon"></i>
-        <i class="fas fa-ticket-alt decoration-item ticket-icon"></i>
-
-        <!-- New Icons (Tourism, Law, AI) -->
-        <i class="fas fa-globe-africa decoration-item globe-icon"></i>
-        <i class="fas fa-passport decoration-item passport-icon"></i>
-        <i class="fas fa-laptop-code decoration-item laptop-icon"></i>
-        <i class="fas fa-brain decoration-item brain-icon"></i>
-        <i class="fas fa-landmark decoration-item landmark-icon"></i>
-        <i class="fas fa-camera decoration-item camera-icon"></i>
-        <i class="fas fa-compass decoration-item compass-icon"></i>
-        <i class="fas fa-map-marked-alt decoration-item map-icon"></i>
-
-        <!-- Replaced Shapes with Tourism Icons -->
-        <i class="fas fa-suitcase-rolling decoration-item suitcase-icon"></i>
-        <i class="fas fa-route decoration-item route-icon"></i>
-        <i class="fas fa-hotel decoration-item hotel-icon"></i>
-    </div>
-
-    <nav class="navbar">
-        <div class="logo">ALPHA<span>.</span></div>
-        <ul class="nav-links">
-            <li><a href="#hero" data-i18n="nav_home">الرئيسية</a></li>
-            <li><a href="#about" data-i18n="nav_about">عني</a></li>
-            <li><a href="#skills" data-i18n="nav_skills">المهارات</a></li>
-            <li><a href="#projects" data-i18n="nav_projects">المشاريع</a></li>
-            <li><a href="#contact" data-i18n="nav_contact">اتصل بي</a></li>
-        </ul>
-        <div class="nav-controls">
-            <a href="assets/docs/cv.jpg" download="Nasreddine_Dib_CV" class="profile-btn"
-                aria-label="تحميل السيرة الذاتية">
-                <img src="assets/img/profile.jpg" alt="Profile" class="protected-image">
-            </a>
-            <button id="lang-toggle" aria-label="تغيير اللغة">EN</button>
-            <button id="theme-toggle" aria-label="تبديل الوضع">🌙</button>
-        </div>
-    </nav>
-
-    <section id="hero" class="hero fade-in">
-        <div class="hero-content">
-            <h1 data-i18n="hero_title"> ALPHA</h1>
-            <p data-i18n="hero_desc">مزيج بين السياحة والذكاء الاصطناعي لرسم مستقبل السياحة الثقافية في الجزائر.</p>
-            <div class="hero-btns">
-                <a href="#projects" class="btn primary" data-i18n="btn_projects">عرض المشاريع</a>
-                <a href="#contact" class="btn secondary" data-i18n="btn_contact">تواصل معي</a>
-            </div>
-        </div>
-    </section>
-
-    <section id="about" class="about section">
-        <h2 class="section-title" data-i18n="about_title">من أنا</h2>
-        <div class="about-container">
-            <div class="about-text">
-                <p data-i18n="about_text" خريج طموح في إدارة السياحة وحاصل على ماجستير مهني، أجمع بين التخصص المهني
-                    والابتكار التقني. أتبنى رؤية قائمة على تسخير الذكاء الاصطناعي والتسويق الرقمي لتقديم تجارب سياحية لا
-                    تُنسى، مع ضمان الكفاءة المالية والقانونية للمشاريع</p>
-            </div>
-        </div>
-    </section>
-
-    <section id="skills" class="skills section">
-        <h2 class="section-title" data-i18n="skills_title">المهارات والخبرات</h2>
-        <div class="skills-grid">
-            <div class="skill-card">
-                <i class="fas fa-briefcase skill-icon"></i>
-                <h3 data-i18n="skill_mgmt">التخصصات المهنية</h3>
-                <ul>
-                    <li data-i18n="skill_master">ماستر مهني في إدارة الأعمال السياحية</li>
-                    <li data-i18n="skill_law">ليسانس في القانون العام</li>
-                    <li data-i18n="skill_intern">تربص في مجال الموارد البشرية بفندق ماريوت</li>
-                </ul>
-            </div>
-            <div class="skill-card">
-                <i class="fas fa-microchip skill-icon"></i>
-                <h3 data-i18n="skill_tech">التكنولوجيا والذكاء الاصطناعي</h3>
-                <ul>
-                    <li data-i18n="skill_ai">عناصر الذكاء الاصطناعي (AI)</li>
-                    <li data-i18n="skill_marketing">أساسيات التسويق الرقمي</li>
-                    <li data-i18n="skill_data">تحليل البيانات (SPSS)</li>
-                </ul>
-            </div>
-            <div class="skill-card">
-                <i class="fas fa-chart-line skill-icon"></i>
-                <h3 data-i18n="skill_finance">المالية واللغات</h3>
-                <ul>
-                    <li data-i18n="skill_pricing">إدارة وتسعير الأعمال (FinTech)</li>
-                    <li data-i18n="skill_english">الإنجليزية (B2 Upper Intermediate)</li>
-                    <li data-i18n="skill_accounting">المحاسبة (Simple Comptable)</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <section id="blog" class="blog section">
-        <h2 class="section-title" data-i18n="blog_title">آخر المقالات</h2>
-        <div id="blog-posts" class="project-grid">
-            <!-- المقالات ستظهر هنا تلقائياً عبر الـ JS -->
-            <div class="loading-spinner" data-i18n="loading">جاري تحميل المقالات...</div>
-        </div>
-    </section>
-
-    <section id="projects" class="projects section">
-        <h2 class="section-title" data-i18n="projects_title">المشاريع الحالية</h2>
-        <div class="project-grid">
-            <div class="project-card">
-                <h3 data-i18n="project_alpha">منصة ألفا - ALPHA</h3>
-                <p data-i18n="project_alpha_desc">مشروع رائد لرقمنة السياحة الثقافية والتاريخية في ولايات الشرق الجزائري
-                    باستخدام حلول تقنية متطورة.
-                </p>
-                <a href="#" class="project-link" data-i18n="project_coming_soon">قريباً..</a>
-            </div>
-        </div>
-    </section>
-
-    <section id="contact" class="contact section">
-        <h2 class="section-title" data-i18n="contact_title">تواصل معي</h2>
-        <form id="contact-form" class="contact-form">
-            <input type="text" name="from_name" placeholder="الاسم الكامل" required
-                data-i18n-placeholder="contact_name_placeholder">
-            <input type="email" name="from_email" placeholder="البريد الإلكتروني" required
-                data-i18n-placeholder="contact_email_placeholder">
-            <textarea name="message" placeholder="رسالتك" rows="5" required
-                data-i18n-placeholder="contact_msg_placeholder"></textarea>
-            <button type="submit" class="btn primary" data-i18n="contact_send">إرسال</button>
-        </form>
-        <div class="social-links">
-            <a href="https://www.linkedin.com/in/nasreddine-dib-3197182b9/" target="_blank" aria-label="LinkedIn"><i
-                    class="fab fa-linkedin"></i> LinkedIn</a>
-            <a href="https://www.facebook.com/nassr.edine?locale=ar_AR" target="_blank" aria-label="Facebook"><i
-                    class="fab fa-facebook"></i> Facebook</a>
-            <a href="mailto:dibnasreddine1@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i> Email</a>
-        </div>
-    </section>
-
-    <footer>
-        <p data-i18n="footer_copy">© 2026 ALPHA - All rights reserved | ألفا - جميع الحقوق محفوظة</p>
-    </footer>
-
-    <!-- Netlify Identity Widget -->
-    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-
-    <script>
-        if (window.netlifyIdentity) {
-            window.netlifyIdentity.on("init", user => {
-                if (!user) {
-                    window.netlifyIdentity.on("login", () => {
-                        document.location.href = "/admin/";
-                    });
-                }
-            });
-        }
-    </script>
-
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-    <script src="js/script.js"></script>
-</body>
-
-</html>
