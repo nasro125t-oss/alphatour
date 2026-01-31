@@ -45,14 +45,20 @@
 
     <nav class="navbar">
         <div class="logo">ALPHA<span>.</span></div>
-        <ul class="nav-links">
+        <ul class="nav-links" id="nav-links">
+            <!-- Container for buttons inside mobile menu (Top) -->
+            <div id="mobile-menu-controls" class="mobile-menu-controls"></div>
             <li><a href="#hero" data-i18n="nav_home">الرئيسية</a></li>
             <li><a href="#about" data-i18n="nav_about">عني</a></li>
             <li><a href="#skills" data-i18n="nav_skills">المهارات</a></li>
-            <li><a href="#blog" data-i18n="blog_title">آخر المقالات</a></li>
+            <li><a href="#blog" data-i18n="blog_title">دليل الوجهات</a></li>
             <li><a href="#projects" data-i18n="nav_projects">المشاريع</a></li>
             <li><a href="#contact" data-i18n="nav_contact">اتصل بي</a></li>
         </ul>
+        <!-- Mobile Destination Guide Shortcut at the top -->
+        <div class="mobile-short-menu">
+            <a href="#blog" class="mobile-show" data-i18n="blog_title">دليل الوجهات</a>
+        </div>
         <div class="nav-controls">
             <a href="assets/docs/cv.jpg" download="Nasreddine_Dib_CV" class="profile-btn"
                 aria-label="تحميل السيرة الذاتية">
@@ -60,6 +66,10 @@
             </a>
             <button id="lang-toggle" aria-label="تغيير اللغة">EN</button>
             <button id="theme-toggle" aria-label="تبديل الوضع">🌙</button>
+            <!-- Mobile Menu Toggle -->
+            <button id="menu-toggle" class="menu-toggle" aria-label="القائمة">
+                <i class="fas fa-bars"></i>
+            </button>
         </div>
     </nav>
 
@@ -68,14 +78,22 @@
             <h1 data-i18n="hero_title"> ALPHA</h1>
             <p data-i18n="hero_desc">مزيج بين السياحة والذكاء الاصطناعي لرسم مستقبل السياحة الثقافية في الجزائر.</p>
             <div class="hero-btns">
-                <a href="#projects" class="btn primary" data-i18n="btn_projects">عرض المشاريع</a>
+                <a href="#blog" class="btn primary" data-i18n="btn_projects">دليل الوجهات</a>
                 <a href="#contact" class="btn secondary" data-i18n="btn_contact">تواصل معي</a>
             </div>
         </div>
     </section>
 
+    <!-- Ad Slot 1: After Hero Section -->
+    <div class="ad-container">
+        <div class="ad-slot">
+            <!-- Place AdSense Script for Slot 1 here -->
+        </div>
+    </div>
+
+
     <section id="about" class="about section">
-        <h2 class="section-title" data-i18n="about_title">من أنا</h2>
+        <h2 class="section-title" data-i18n="about_title">قصتي</h2>
         <div class="about-container">
             <div class="about-text">
                 <p data-i18n="about_text" خريج طموح في إدارة السياحة وحاصل على ماجستير مهني، أجمع بين التخصص المهني
@@ -120,11 +138,17 @@
 
     <section id="blog" class="blog section">
         <h2 class="section-title" data-i18n="blog_title">آخر المقالات</h2>
-        <div id="blog-posts" class="project-grid">
-            <!-- المقالات ستظهر هنا تلقائياً عبر الـ JS -->
-            <div class="loading-spinner" data-i18n="loading">جاري تحميل المقالات...</div>
+        <div id="blog-posts" class="blog-container">
+            <p data-i18n="loading">جاري تحميل المقالات السياحية...</p>
         </div>
     </section>
+
+    <!-- Ad Slot 2: Before Projects Section -->
+    <div class="ad-container">
+        <div class="ad-slot">
+            <!-- Place AdSense Script for Slot 2 here -->
+        </div>
+    </div>
 
     <section id="projects" class="projects section">
         <h2 class="section-title" data-i18n="projects_title">المشاريع الحالية</h2>
@@ -159,8 +183,18 @@
         </div>
     </section>
 
-    <footer>
-        <p data-i18n="footer_copy">© 2026 ALPHA - All rights reserved | ألفا - جميع الحقوق محفوظة</p>
+    <!-- Ad Slot 3: Before Footer -->
+    <div class="ad-container">
+        <div class="ad-slot">
+            <!-- Place AdSense Script for Slot 3 here -->
+        </div>
+    </div>
+
+    <footer
+        style="text-align: center; padding: 20px; background: rgba(255, 255, 255, 0.05); margin-top: 50px; border-top: 1px solid rgba(255, 255, 255, 0.1);">
+        <p>© 2026 ألفا تور - جميع الحقوق محفوظة</p>
+        <a href="privacy-policy.html" style="color: var(--primary-color); text-decoration: none;">سياسة الخصوصية</a> |
+        <a href="contact.html" style="color: var(--primary-color); text-decoration: none;">اتصل بنا</a>
     </footer>
 
     <script>
