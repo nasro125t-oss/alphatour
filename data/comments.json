@@ -1,0 +1,38 @@
+{
+  "comments": {
+    "ghar-djemaa.md": [
+      {
+        "id": 1,
+        "author": "أحمد محمد",
+        "text": "مقال رائع ومفيد جداً! شكراً على المعلومات القيمة عن غار الجماعة. بالتأكيد سأزوره قريباً.",
+        "date": "2026-01-29",
+        "approved": true
+      },
+      {
+        "id": 2,
+        "author": "Sara Ali",
+        "text": "Amazing article! The cave looks absolutely stunning. Can't wait to visit Guelma and explore this beautiful place.",
+        "date": "2026-01-29",
+        "approved": true
+      }
+    ],
+    "hammam-meskhoutine.md": [
+      {
+        "id": 1,
+        "author": "فاطمة الزهراء",
+        "text": "زرت حمام المسخوطين العام الماضي وكانت تجربة لا تُنسى! المياه الساخنة والمناظر الطبيعية خيالية.",
+        "date": "2026-01-28",
+        "approved": true
+      }
+    ],
+    "maouna-mountain.md": [
+      {
+        "id": 1,
+        "author": "Karim Benali",
+        "text": "جبل ماونة من أجمل الأماكن التي زرتها في الجزائر. المقال شامل ومفيد للغاية!",
+        "date": "2026-01-27",
+        "approved": true
+      }
+    ]
+  }
+}
