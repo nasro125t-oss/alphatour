@@ -31,6 +31,8 @@
 *   **المميزات:** تتميز زلابية المنطقة بلونها الذهبي وقوامها المقرمش من الخارج والطري من الداخل، وهي مغطاة بالعسل الصافي.
 *   **معلومات للسياح:** تُباع بكثرة في المحلات القديمة وسط المدينة، ويُفضل تناولها وهي ساخنة لتذوق نكهتها الأصلية.
 
+![الزلابية التقليدية في وادي الزناتي](assets/img/blog/oued-zenati-zalabia.jpg)
+
 ### حلوى الكوكاو
 *   **المميزات:** تشتهر وادي الزناتي بصناعة "حلوى الكوكاو" التقليدية، حيث يتم تحميص الفول السوداني وخلطه مع الكراميل أو العسل ليشكل قطعاً صلبة ولذيذة.
 *   **سر الشهرة:** تعتبر من الوجبات الخفيفة المفضلة للمسافرين والسياح نظراً لقدرتها على البقاء طازجة لفترات طويلة.
@@ -119,6 +121,8 @@ A visit to Oued Zenati is incomplete without indulging in the experience of tast
 ### Zenati Zalabia
 *   **Features:** The area's Zalabia is characterized by its golden color and a texture that is crispy on the outside and soft on the inside, covered in pure honey.
 *   **Information for Tourists:** It is extensively sold in the old shops downtown; it is best enjoyed hot to taste its original flavor.
+
+![Traditional Zalabia in Oued Zenati](assets/img/blog/oued-zenati-zalabia.jpg)
 
 ### Kawkaw Candy (Peanut Candy)
 *   **Features:** Oued Zenati is famous for making traditional "Kawkaw candy," where peanuts are roasted and mixed with caramel or honey to form hard, delicious pieces.

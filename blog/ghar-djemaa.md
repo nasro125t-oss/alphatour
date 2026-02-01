@@ -16,7 +16,7 @@
 ## مقدمة: أهلاً بك مجدداً!
 تعتبر ولاية قالمة، أو "عروس الشرق الجزائري"، وجهة سياحية متكاملة تجمع بين الاستشفاء بالمياه المعدنية، السياحة الأثرية، وسياحة المغامرات. وفي قمة جبل طاية الشامخ، يربض "غار الجماعة" كواحد من أجمل وأغرب المغارات في شمال أفريقيا، بانتظار المستكشفين والباحثين عن التميز.
 
-![غار الجماعة - جبل طاية](assets/img/blog/ghar-djemaa-1.jpg)
+![غار الجماعة - جبل طاية](assets/img/blog/ghar-djemaa-new-main.jpg)
 
 ## 1. الموقع الجغرافي والوصول
 
@@ -118,7 +118,7 @@
 ## Introduction: Welcome Back!
 Guelma Province, or the "Bride of Eastern Algeria," is a comprehensive tourist destination that combines healing with mineral waters, archaeological tourism, and adventure tourism. At the summit of the majestic Djebel Taya, "Ghar El Djemaa" (The Assembly Cave) stands as one of the most beautiful and strangest caves in North Africa, awaiting explorers and seekers of distinction.
 
-![Ghar El Djemaa - Djebel Taya](assets/img/blog/ghar-djemaa-1.jpg)
+![Ghar El Djemaa - Djebel Taya](assets/img/blog/ghar-djemaa-new-main.jpg)
 
 ## 1. Geographic Location and Access
 
