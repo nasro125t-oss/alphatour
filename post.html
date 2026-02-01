@@ -57,14 +57,37 @@
 
         img {
             max-width: 100%;
-            max-height: 350px;
-            /* تصغير الارتفاع الأقصى */
-            object-fit: cover;
+            max-height: 500px;
+            object-fit: contain;
             height: auto;
             border-radius: 12px;
             margin: 20px auto;
             display: block;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Responsive images for mobile */
+        @media (max-width: 768px) {
+            img {
+                max-height: 300px;
+                margin: 15px auto;
+            }
+        }
+
+        /* AdSense styling */
+        .ad-space {
+            text-align: center;
+            padding: 15px;
+            background: rgba(0, 0, 0, 0.03);
+            border: 1px dashed #ccc;
+            margin: 30px 0;
+            min-height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #888;
+            font-size: 0.85rem;
+            border-radius: 8px;
         }
 
         a {
@@ -82,16 +105,6 @@
             margin-bottom: 20px;
             color: #e67e22;
             font-weight: bold;
-        }
-
-        .ad-space {
-            text-align: center;
-            padding: 20px;
-            background: #f9f9f9;
-            border: 1px dashed #ccc;
-            margin: 30px 0;
-            color: #999;
-            font-size: 0.8rem;
         }
 
         /* Tables Styling */
@@ -218,19 +231,30 @@
     </style>
     <!-- Markdown Parser -->
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
+    <!-- Google AdSense Global Script (Paste your client ID here) -->
+    <!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-YOUR_ID_HERE" crossorigin="anonymous"></script> -->
 </head>
 
 <body>
     <div class="container">
         <a href="index.html" class="back-btn">← العودة للرئيسية</a>
 
-        <div id="ad-top" class="ad-space">مساحة إعلانية (Google AdSense)</div>
+        <!-- Ad Slot Top -->
+        <div id="ad-top" class="ad-space">
+            <div>إعلان (Google AdSense)</div>
+            <div style="font-size: 0.7rem; color: #bbb;">قم بلصق كود الإعلان الخاص بك هنا</div>
+        </div>
 
         <article id="article-body" class="post-content">
             <p>جاري تحميل المقال...</p>
         </article>
 
-        <div id="ad-bottom" class="ad-space">مساحة إعلانية (Google AdSense)</div>
+        <!-- Ad Slot Bottom -->
+        <div id="ad-bottom" class="ad-space">
+            <div>إعلان (Google AdSense)</div>
+            <div style="font-size: 0.7rem; color: #bbb;">قم بلصق كود الإعلان الخاص بك هنا</div>
+        </div>
 
         <!-- Contact & Comments Section -->
         <div class="interactions-section">
@@ -687,11 +711,10 @@
         // نسخة احتياطية للمعاينة المحلية لتجاوز قيود المتصفح (CORS)
         const localArticles = {
             'oued-zenati.md': `
-> **المقال:** منارة العلم والإصلاح وسحر تمثال "Eloa" ولذة الحلويات التقليدية <br>
-> **العنوان:** مدينة وادي الزناتي العريقة <br>
+> **المقال:** جوهرة الشرق الجزائري: مدينة وادي الزناتي العريقة <br>
 > **بقلم:** ذيب نصرالدين <br>
-> **يوم:** 01-02-2026 <br>
-> **الكلمات المفتاحية:** وادي الزناتي، تمثال Eloa، حلويات قالمة، زلابية، سياحة الجزائر، معالم وادي الزناتي، عمار مهري، وادي الزناتي، المسجد العتيق قالمة، تاريخ الجزائر، الأمير خالد، علماء الجزائر، سياحة دينية. <br>
+> **التاريخ:** 01-02-2026 <br>
+> **الكلمات المفتاحية:** وادي الزناتي، تمثال Eloa، حلويات قالمة، زلابية، سياحة الجزائر، المسجد العتيق قالمة. <br>
 
 ---
 
@@ -1562,7 +1585,18 @@ The Roman Theater in Guelma is not just deaf stones, but a story of glory forged
 *   **التجهيزات:** يفضل ارتداء أحذية رياضية مريحة لأن التجول داخل الموقع يتطلب المشي لمسافات طويلة بين المسارات الحجرية.
 *   **الحماية:** الموقع أثري وطني، لذا يُرجى الحفاظ على نظافة المكان وعدم تحريك أو المساس بالأحجار والنقوش لضمان بقائها للأجيال القادمة.
 
-## خاتمة
+![لافتة موقع الركنية الأثري](assets/img/blog/thibilis-ruins-3.jpg)
+
+| المعلومة | التفاصيل |
+| :--- | :--- |
+| **الموقع** | بلدية الركنية، ولاية قالمة |
+| **العمر الزمني** | العصر الحجري الحديث / ما قبل التاريخ |
+| **نوع المعلم** | مقابر ميغاليثية (دولمن) |
+| **أهمية الموقع** | فريد من نوعه ويضم آلاف القبور الجنائزية |
+
+تُعد المقبرة الميغاليثية بالركنية محطة أساسية لكل سائح يزور قالمة، فهي تكتمل بجولة تشمل "**حمام الدباغ**" و"**المسرح الروماني**" لتشكل مساراً سياحياً يربط الطبيعة بالتاريخ القديم.
+
+## الخاتمة
 إن آثار سلاوة عنونة هي دعوة مفتوحة لكل عشاق السياحة التاريخية لاكتشاف فصل منسي من فصول "تيبليس" العظيمة. هي رحلة لا تكتمل زيارتك لقالمة دون أن تخوض غمارها.
 
 ### موقع آثار تيبليس على الخريطة (GPS)
@@ -1613,6 +1647,17 @@ The ruins of Sellaoua Announa are characterized by their diversity, which allows
 *   **Access:** It can be reached via the national road linking Guelma and Constantine, and the road leading to Sellaoua Announa is paved and easy to travel.
 *   **Equipment:** It is preferable to wear comfortable sports shoes because touring inside the site requires walking long distances between stone paths.
 *   **Protection:** The site is a national archaeological site, so please maintain the cleanliness of the place and do not move or touch the stones and inscriptions to ensure their survival for future generations.
+
+![Roknia Archaeological Site Sign](assets/img/blog/thibilis-ruins-3.jpg)
+
+| Information | Details |
+| :--- | :--- |
+| **Location** | Roknia Municipality, Guelma Province |
+| **Time Period** | Neolithic / Prehistory |
+| **Type** | Megalithic Tombs (Dolmens) |
+| **Importance** | Unique, containing thousands of funerary tombs |
+
+The Megalithic Cemetery in Roknia is an essential stop for every tourist visiting Guelma. A complete tour would include "**Hammam Debagh**" and the "**Roman Theater**" to form a tourist route connecting nature with ancient history.
 
 ## Conclusion
 The ruins of Sellaoua Announa are an open invitation to all lovers of historical tourism to discover a forgotten chapter of the great "Thibilis". It is a journey that your visit to Guelma is not complete without experiencing.
@@ -1694,12 +1739,6 @@ The ruins of Sellaoua Announa are an open invitation to all lovers of historical
 
 ---en---
 
-> **Article:** Guelma's Green Paradise and a Haven for Seekers of Serenity
-> **Title:** Mount Maouna
-> **By:** Nasreddine Dib
-> **Date:** 2026-01-29
-> **Keywords:** Mount Maouna, Guelma, Camping, Mountain Tourism, Nature in Algeria
-
 # Mount Maouna: Guelma's Green Paradise and a Haven for Seekers of Serenity
 
 ## Introduction: Guelma's Crown Studded with Greenery
@@ -1709,16 +1748,12 @@ If Guelma is famous for its Roman ruins, then Mount Maouna is the lung through w
 
 ## Geography of the Site: Where Sky Meets Earth?
 Mount Maouna is located in the southern part of Guelma city, distinguished by its strategic location overlooking vast areas of the province, reaching the borders of neighboring provinces on clear days. The mountain is characterized by the diversity of its vegetation cover, which includes dense forests of:
-
-
 *   **Oak and Cork Trees:** Granting the mountain permanent greenery and cool shades in summer.
 *   **Atlas Cedar:** Spread in the high altitudes.
 *   **Aromatic and Medicinal Herbs:** Whose scent wafts as soon as you ascend the mountain trails.
 
 ## Maouna in Winter: The Switzerland of Eastern Algeria
 When winter arrives, Mount Maouna transforms into a charming white painting. The mountain wears a cloak of heavy snow that attracts families and youth from all directions:
-
-
 *   **Skiing and Snow Play Lovers:** The slopes become an ideal place for children and adults to enjoy the whiteness.
 *   **Winter Camping:** For camping professionals, the peaks offer an exceptional experience to live amidst the snow, where absolute calmness and the experience of cooking over firewood in the cold atmosphere prevail.
 
@@ -1726,16 +1761,12 @@ When winter arrives, Mount Maouna transforms into a charming white painting. The
 
 ## Maouna Summer: The Escape from "Seybouse" Heat
 While temperatures rise in the center of Guelma city, Mount Maouna retains its refreshing coolness:
-
-
 *   **Pure and Cool Air:** The temperature in the mountain drops by an average of 5 to 8 degrees compared to the center, making it the "natural air conditioner" for the people of the region.
 *   **Family Barbecue Sessions:** The mountain offers spaces equipped to welcome families seeking refuge from the city noise.
 *   **Enchanting Sunset:** Do not miss the opportunity to watch the sunset from one of the peaks, where the sky is painted in amazing purple colors reflecting on the plains of Guelma.
 
 ## Camping Guide and Activities (Tips for Pros and Amateurs)
 As someone interested in local tourism, here are the most important activities you can do in Maouna:
-
-
 1.  **Hiking:** There are trails of varying difficulty, from easy trails for families to rugged ones for adventure enthusiasts.
 2.  **Night Camping:** It is recommended to camp in groups, and choose places near known points to ensure safety.
 3.  **Wildlife Photography:** The mountain is home to many species of birds and wild animals like wild boars and rabbits, making it a paradise for photographers.
@@ -2348,6 +2379,8 @@ In conclusion, Guelta Zerka waterfalls in Hammam N'Bail remain an open invitatio
     </a>
 </div>
             `
+            ,
+
         };
 
         async function loadPost() {
@@ -2410,19 +2443,49 @@ In conclusion, Guelta Zerka waterfalls in Hammam N'Bail remain an open invitatio
                 }
             }
 
-            // Remove Frontmatter
-            text = text.trim().replace(/^---([\s\S]*?)---/, '');
+            // Improved Frontmatter & Metadata Removal
+            text = text.trim();
 
-            // Handle Language Split
-            const parts = text.split('---en---');
+            // Handle Language Split FIRST to isolate the correct section
+            // Split by ---en--- with flexible newline handling
+            const parts = text.split(/(?:\r?\n|^)---\s*en\s*---(?:\r?\n|$)/i);
+
             let contentToRender = parts[0];
-
-            if (currentLang === 'en' && parts.length > 1) {
-                contentToRender = parts[1];
-            } else if (currentLang === 'en') {
-                // Fallback if no English content
-                contentToRender = "> **Note:** This article is not available in English yet.\n\n" + parts[0];
+            if (currentLang === 'en') {
+                if (parts.length > 1) {
+                    contentToRender = parts[1];
+                } else {
+                    contentToRender = "> **Note:** This article is not available in English yet.\n\n" + parts[0];
+                }
             }
+
+            // Clean up contentToRender
+            contentToRender = contentToRender.trim();
+
+            // 1. Remove Quote Block Metadata (starts with > **)
+            // Remove multiple lines of quote metadata
+            contentToRender = contentToRender.replace(/^(> \*\*.*?\*\*.*?<br>\s*)+/gm, '');
+
+            // 2. Remove YAML Frontmatter (--- ... ---) if present
+            // We use a regex that finds --- followed by content and ---, but NOT ---en--- (already split)
+            // We allow it to be at the start OR after some whitespace
+            contentToRender = contentToRender.replace(/(?:^|\n)---[\r\n]+[\s\S]*?[\r\n]+---/g, '');
+
+            // 3. Cleanup specific metadata lines if they survived as plain text
+            const metadataLines = [
+                /^title:\s*".*?"/gim,
+                /^description:\s*".*?"/gim,
+                /^date:\s*".*?"/gim,
+                /^image:\s*".*?"/gim,
+                /^keywords:\s*".*?"/gim,
+                /^title_en:\s*".*?"/gim,
+                /^description_en:\s*".*?"/gim
+            ];
+            metadataLines.forEach(regex => {
+                contentToRender = contentToRender.replace(regex, '');
+            });
+
+            contentToRender = contentToRender.trim();
 
             // Parse the markdown content
             let parsedContent = marked.parse(contentToRender);

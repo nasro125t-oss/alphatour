@@ -1,0 +1,13 @@
+[build]
+  publish = "."
+  command = ""
+
+[dev]
+  command = "npm start"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+
