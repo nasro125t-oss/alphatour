@@ -1,13 +1,8 @@
-> **المقال:** منارة العلم والإصلاح وسحر تمثال "Eloa" ولذة الحلويات التقليدية <br>
-> **Article:** The Beacon of Knowledge and Reform, the Charm of "Eloa" Statue, and the Delight of Traditional Sweets <br>
+> **المقال:** جوهرة الشرق الجزائري: مدينة وادي الزناتي العريقة <br>
 > **العنوان:** مدينة وادي الزناتي العريقة <br>
-> **Title:** The Ancient City of Oued Zenati <br>
 > **بقلم:** ذيب نصرالدين <br>
-> **By:** Nasreddine Dib <br>
-> **يوم:** 01-02-2026 <br>
-> **Date:** 2026-02-01 <br>
-> **الكلمات المفتاحية:** وادي الزناتي، تمثال Eloa، حلويات قالمة، زلابية، سياحة الجزائر، معالم وادي الزناتي، عمار مهري، وادي الزناتي، المسجد العتيق قالمة، تاريخ الجزائر، الأمير خالد، علماء الجزائر، سياحة دينية. <br>
-> **Keywords:** Oued Zenati, Eloa Statue, Guelma Sweets, Zalabia, Algeria Tourism, Oued Zenati Landmarks, Amar Mehri, Oued Zenati, Al-Atiq Mosque Guelma, Algeria History, Emir Khaled, Algeria Scholars, Religious Tourism. <br>
+> **التاريخ:** 01-02-2026 <br>
+> **الكلمات المفتاحية:** وادي الزناتي، تمثال Eloa، حلويات قالمة، زلابية، سياحة الجزائر، المسجد العتيق قالمة. <br>
 ---
 
 # وادي الزناتي: بين سحر تمثال "Eloa" ولذة الحلويات التقليدية
